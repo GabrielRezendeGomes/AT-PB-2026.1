@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: petfriends-rabbitmq
+    ports:
+      - "5672:5672"   # Porta do Spring Boot
+      - "15672:15672" # Porta do painel Web
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
