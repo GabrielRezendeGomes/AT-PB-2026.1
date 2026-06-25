@@ -29,12 +29,11 @@ public class EstoqueProduto {
     public EstoqueProduto(Long produtoId, Integer quantidadeInicial) {
         this.produtoId = produtoId;
         this.quantidadeDisponivel = new Quantidade(quantidadeInicial);
-        this.quantidadeReservada = new Quantidade(0); // Inicia sempre zerada
+        this.quantidadeReservada = new Quantidade(0);
     }
 
     public void adicionarEstoque(Integer quantidade) {
         Quantidade qtdAdicionar = new Quantidade(quantidade);
-        // Atribui uma nova instância, respeitando a imutabilidade
         this.quantidadeDisponivel = this.quantidadeDisponivel.somar(qtdAdicionar);
     }
 

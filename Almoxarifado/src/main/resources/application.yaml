@@ -4,24 +4,25 @@ server:
 spring:
   application:
     name: Almoxarifado
-    datasource:
-      url: jdbc:h2:mem:almoxarifado_db
-      driverClassName: org.h2.Driver
-      username: sa
-      password:
 
-      jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
-        hibernate:
-          ddl-auto: update
-        show-sql: true
+  datasource:
+    url: jdbc:h2:mem:almoxarifado_db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ""
 
-      h2:
-        console:
-          enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
-      rabbitmq:
-        host: localhost
-        port: 5672
-        username: guest
-        password: guest
+  h2:
+    console:
+      enabled: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

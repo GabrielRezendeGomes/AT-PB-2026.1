@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class PedidoCriadoEvent {
 
-    private UUID eventoId;
+    private String eventoId;
     private String tipoEvento;
     private LocalDateTime dataHora;
     private DadosPedido dados;
@@ -15,8 +15,8 @@ public class PedidoCriadoEvent {
     public PedidoCriadoEvent() {}
 
     // Getters e Setters
-    public UUID getEventoId() { return eventoId; }
-    public void setEventoId(UUID eventoId) { this.eventoId = eventoId; }
+    public String getEventoId() { return eventoId; }
+    public void setEventoId(String eventoId) { this.eventoId = eventoId; }
 
     public String getTipoEvento() { return tipoEvento; }
     public void setTipoEvento(String tipoEvento) { this.tipoEvento = tipoEvento; }
